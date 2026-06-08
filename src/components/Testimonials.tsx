@@ -91,16 +91,6 @@ export default function Testimonials() {
         </div>
 
         <div className="testimonials-controls" role="group" aria-label="Controles do carrossel">
-          <button
-            className="slider-btn"
-            onClick={prev}
-            disabled={current === 0}
-            aria-label="Depoimento anterior"
-            style={{ opacity: current === 0 ? .4 : 1 }}
-          >
-            ←
-          </button>
-
           <div className="slider-dots" role="list" aria-label="Indicadores de posição">
             {[...Array(maxIndex + 1)].map((_, i) => (
               <button
@@ -113,16 +103,6 @@ export default function Testimonials() {
               />
             ))}
           </div>
-
-          <button
-            className="slider-btn"
-            onClick={next}
-            disabled={current === maxIndex}
-            aria-label="Próximo depoimento"
-            style={{ opacity: current === maxIndex ? .4 : 1 }}
-          >
-            →
-          </button>
         </div>
       </div>
     </section>

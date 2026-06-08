@@ -58,7 +58,7 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <div className="footer-logo">
-              <img src="/images/logo.png" alt="BSM Odontologia e Estética Avançada" style={{ height: 56, width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
+              <img src="/images/logo.png" alt="BSM Odontologia e Estética Avançada" style={{ height: 56, width: 'auto', objectFit: 'contain' }} />
             </div>
 
             <p className="footer-brand-text">
@@ -79,7 +79,9 @@ export default function Footer() {
                   title={s.pending ? `⚠️ ${s.label} — link pendente, substitua em Footer.tsx` : s.label}
                   style={s.pending ? { outline: '1px dashed rgba(245,158,11,0.5)', outlineOffset: 2 } : {}}
                 >
-                  {s.icon}
+                  {s.label === 'Instagram'
+                    ? <img src="/images/intagranicon.png" alt="Instagram" style={{ width: 22, height: 22, objectFit: 'contain' }} />
+                    : s.icon}
                 </a>
               ))}
             </div>

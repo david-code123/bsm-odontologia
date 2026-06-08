@@ -1,5 +1,3 @@
-import ImagePlaceholder from './ImagePlaceholder'
-
 const features = [
   { icon: '🤝', title: 'Atendimento Humanizado', desc: 'Cada paciente é tratado com cuidado e atenção individualizada.' },
   { icon: '⚙️', title: 'Equipamentos Modernos', desc: 'Tecnologia de ponta para diagnósticos precisos e tratamentos eficazes.' },
@@ -24,12 +22,11 @@ export default function About() {
                   <img src="/images/sobre-equipe.jpg" alt="Equipe BSM" style={{ width:'100%', height:'100%', objectFit:'cover' }} />
               ───────────────────────────────────────────────────────────── */}
               <div className="about-img-main">
-                <ImagePlaceholder
-                  label="Foto da Equipe ou Clínica"
-                  hint="Dentista(s) em posição profissional. Tamanho ideal: 600×700px"
-                  icon="👨‍⚕️"
-                  variant="dark"
-                  style={{ height: '100%' }}
+                <img
+                  src="/images/dentist-blue.jpg"
+                  alt="Dr. BSM Odontologia — especialista em estética dental em Goiânia"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
+                  loading="lazy"
                 />
               </div>
 
@@ -38,12 +35,11 @@ export default function About() {
                   Tamanho ideal: 400×400px  |  Formato: JPG ou WebP
               ───────────────────────────────────────────────────────────── */}
               <div className="about-img-secondary">
-                <ImagePlaceholder
-                  label="Detalhe / Equipamento"
-                  hint="Equipamento moderno ou consultório. 400×400px"
-                  icon="⚙️"
-                  variant="light"
-                  style={{ height: '100%' }}
+                <img
+                  src="/images/dentist-procedure.jpg"
+                  alt="Dentista BSM realizando procedimento odontológico"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
+                  loading="lazy"
                 />
               </div>
 

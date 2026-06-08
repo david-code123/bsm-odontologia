@@ -1,5 +1,3 @@
-import ImagePlaceholder from './ImagePlaceholder'
-
 const WA_LINK = 'https://wa.me/5562993557723?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20BSM%20Odontologia.'
 
 export default function Hero() {
@@ -72,12 +70,11 @@ export default function Hero() {
                   <img src="/images/hero-consultorio.jpg" alt="Consultório BSM" style={{ width:'100%', height:'100%', objectFit:'cover', borderRadius:32 }} />
               ───────────────────────────────────────────────────────────── */}
               <div className="hero-image-main">
-                <ImagePlaceholder
-                  label="Foto Principal — Hero"
-                  hint="Consultório, equipe ou paciente sorrindo. Tamanho ideal: 800×1000px"
-                  icon="🦷"
-                  variant="dark"
-                  style={{ borderRadius: 32, border: '2px dashed rgba(20,184,166,0.4)' }}
+                <img
+                  src="/images/clinic-entrada.jpg"
+                  alt="Fachada da BSM Odontologia e Estética Avançada em Goiânia"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 32 }}
+                  loading="eager"
                 />
               </div>
 

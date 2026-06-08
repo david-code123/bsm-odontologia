@@ -659,6 +659,35 @@ input, textarea, select { font-family: inherit; }
   padding: var(--section-padding);
   background: var(--color-gray-light);
 }
+.treatments-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+.treatments-tab {
+  padding: 12px 28px;
+  border-radius: 50px;
+  border: 2px solid var(--color-gray-200);
+  background: transparent;
+  color: var(--color-gray-600);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+.treatments-tab:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.treatments-tab.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.3);
+}
 .treatments-header {
   text-align: center;
   margin-bottom: 64px;

@@ -1,49 +1,42 @@
+import { useState } from 'react'
+
 const WA_LINK = 'https://wa.me/5562993557723?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20tratamentos%20da%20BSM%20Odontologia.'
 
-const treatments = [
+const categories = [
   {
-    icon: '🦷',
-    title: 'Implantes Dentários',
-    desc: 'Reposição de dentes perdidos com implantes de titânio de alta qualidade, devolvendo função e estética com naturalidade.',
+    id: 'odonto',
+    label: '🦷 Odontologia',
+    treatments: [
+      { icon: '🦷', title: 'Tratamento Dental', desc: 'Diagnóstico e tratamento completo para sua saúde bucal, com técnicas modernas e minimamente invasivas.' },
+      { icon: '💎', title: 'Lentes de Contato Dental', desc: 'Ultra-finas camadas de porcelana que transformam completamente o sorriso com mínimo desgaste dental.' },
+      { icon: '✨', title: 'Clareamento Dental', desc: 'Clareamento seguro e eficaz para um sorriso mais branco e radiante, com técnicas de consultório e caseiras.' },
+      { icon: '🌟', title: 'Facetas de Porcelana', desc: 'Facetas em cerâmica de alta resistência para corrigir forma, cor e proporção dos dentes anteriores.' },
+    ],
   },
   {
-    icon: '😁',
-    title: 'Ortodontia',
-    desc: 'Alinhamento dos dentes com aparelhos modernos, incluindo opções metálicas, estéticas e alinhadores transparentes.',
+    id: 'facial',
+    label: '💉 Estética Facial',
+    treatments: [
+      { icon: '💉', title: 'Botox', desc: 'Aplicação de toxina botulínica para suavizar linhas de expressão e rugas, com resultado natural e duradouro.' },
+      { icon: '✂️', title: 'Lipo de Papada', desc: 'Procedimento minimamente invasivo para redução da gordura localizada na região do pescoço e mento.' },
+      { icon: '🔬', title: 'Platismoplastia', desc: 'Tratamento estético para rejuvenescimento e definição do contorno do pescoço e região cervical.' },
+      { icon: '✨', title: 'Harmonização Facial', desc: 'Conjunto de procedimentos estéticos para equilibrar as proporções do rosto e realçar a beleza natural.' },
+    ],
   },
   {
-    icon: '✨',
-    title: 'Clareamento Dental',
-    desc: 'Clareamento seguro e eficaz para um sorriso mais branco e radiante, com técnicas de consultório e caseiras.',
-  },
-  {
-    icon: '💎',
-    title: 'Lentes de Contato Dental',
-    desc: 'Ultra-finas camadas de porcelana que transformam completamente o sorriso com mínimo desgaste dental.',
-  },
-  {
-    icon: '🌟',
-    title: 'Facetas de Porcelana',
-    desc: 'Facetas em cerâmica de alta resistência para corrigir forma, cor e proporção dos dentes anteriores.',
-  },
-  {
-    icon: '🦴',
-    title: 'Prótese Dentária',
-    desc: 'Próteses fixas e removíveis personalizadas para reabilitar a função mastigatória e a estética do sorriso.',
-  },
-  {
-    icon: '💉',
-    title: 'Harmonização Orofacial',
-    desc: 'Procedimentos estéticos faciais como preenchimento labial, bichectomia e botox para harmonizar o rosto.',
-  },
-  {
-    icon: '🪥',
-    title: 'Limpeza e Profilaxia',
-    desc: 'Limpeza profissional completa, remoção de tártaro e orientação de higiene bucal para manter a saúde dos dentes e gengivas.',
+    id: 'corporal',
+    label: '💠 Estética Corporal',
+    treatments: [
+      { icon: '🌿', title: 'Depilação', desc: 'Tratamento de depilação com tecnologia avançada para resultados duradouros e pele sedosa.' },
+      { icon: '💧', title: 'Detox Corporal', desc: 'Tratamento corporal detoxificante para eliminar toxinas, melhorar a circulação e revitalizar o corpo.' },
+      { icon: '⚡', title: 'Tratamento para Flacidez', desc: 'Procedimentos corporais com equipamentos de última geração para firmeza e definição da pele.' },
+    ],
   },
 ]
 
 export default function Treatments() {
+  const [active, setActive] = useState(0)
+
   return (
     <section id="tratamentos" className="treatments" aria-labelledby="treatments-title">
       <div className="container">
@@ -53,30 +46,54 @@ export default function Treatments() {
             Nossos <span>Tratamentos</span>
           </h2>
           <p className="section-subtitle">
-            Oferecemos uma ampla gama de tratamentos odontológicos com tecnologia de ponta
-            e profissionais especializados para cada necessidade.
+            Especialistas em transformar rostos, sorrisos e corpos com tecnologia avançada e atendimento humanizado.
           </p>
         </header>
 
-        <ul className="treatments-grid" role="list" aria-label="Tratamentos disponíveis">
-          {treatments.map((t, i) => (
-            <li key={t.title} className="treatment-card reveal" style={{ transitionDelay: `${i * 60}ms` }} role="listitem">
-              <div className="treatment-icon" aria-hidden="true">{t.icon}</div>
-              <h3 className="treatment-title">{t.title}</h3>
-              <p className="treatment-desc">{t.desc}</p>
-              <a
-                href={WA_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="treatment-link"
-                aria-label={`Saiba mais sobre ${t.title}`}
-              >
-                Saiba Mais
-                <span className="treatment-link-arrow" aria-hidden="true">→</span>
-              </a>
-            </li>
+        <div className="treatments-tabs reveal" role="tablist" aria-label="Categorias de tratamentos">
+          {categories.map((cat, i) => (
+            <button
+              key={cat.id}
+              role="tab"
+              aria-selected={active === i}
+              aria-controls={`tab-panel-${cat.id}`}
+              className={`treatments-tab${active === i ? ' active' : ''}`}
+              onClick={() => setActive(i)}
+            >
+              {cat.label}
+            </button>
           ))}
-        </ul>
+        </div>
+
+        {categories.map((cat, i) => (
+          <div
+            key={cat.id}
+            id={`tab-panel-${cat.id}`}
+            role="tabpanel"
+            hidden={active !== i}
+            aria-label={cat.label}
+          >
+            <ul className="treatments-grid" role="list" aria-label={`Tratamentos de ${cat.label}`}>
+              {cat.treatments.map((t, j) => (
+                <li key={t.title} className="treatment-card reveal" style={{ transitionDelay: `${j * 60}ms` }} role="listitem">
+                  <div className="treatment-icon" aria-hidden="true">{t.icon}</div>
+                  <h3 className="treatment-title">{t.title}</h3>
+                  <p className="treatment-desc">{t.desc}</p>
+                  <a
+                    href={WA_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="treatment-link"
+                    aria-label={`Saiba mais sobre ${t.title}`}
+                  >
+                    Saiba Mais
+                    <span className="treatment-link-arrow" aria-hidden="true">→</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </section>
   )

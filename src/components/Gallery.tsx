@@ -1,8 +1,8 @@
 const galleryItems: { src: string; alt: string; position?: string }[] = [
-  { src: '/images/clinic-recepcao.jpg',   alt: 'Recepção da BSM Odontologia — balcão em mármore',         position: 'center' },
-  { src: '/images/clinic-consultorio.jpg',alt: 'Consultório odontológico moderno com cadeira e equipamentos', position: 'center' },
-  { src: '/images/clinic-estetica.jpg',   alt: 'Sala de estética com equipamento Hyalus',                 position: 'center' },
   { src: '/images/clinic-entrada.jpg',    alt: 'Fachada da BSM Odontologia — Jardim Goiás, Goiânia',      position: 'center' },
+  { src: '/images/clinic-estetica.jpg',   alt: 'Sala de estética com equipamento Hyalus',                 position: 'center' },
+  { src: '/images/clinic-consultorio.jpg',alt: 'Consultório odontológico moderno com cadeira e equipamentos', position: 'center' },
+  { src: '/images/clinic-recepcao.jpg',   alt: 'Recepção da BSM Odontologia — balcão em mármore',         position: 'center' },
   { src: '/images/dentist-procedure.jpg', alt: 'Dentista BSM realizando procedimento odontológico',        position: 'top'    },
   { src: '/images/dentist-green.jpg',     alt: 'Especialista em odontologia estética da BSM',              position: 'top'    },
 ]

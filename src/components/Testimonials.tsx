@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState } from 'react'
 
 const testimonials = [
   {
@@ -45,8 +45,6 @@ export default function Testimonials() {
   const perPage = 3
 
   const maxIndex = total - perPage
-  const prev = useCallback(() => setCurrent(c => Math.max(0, c - 1)), [])
-  const next = useCallback(() => setCurrent(c => Math.min(maxIndex, c + 1)), [maxIndex])
 
   const offset = -current * (100 / perPage)
 

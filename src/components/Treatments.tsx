@@ -4,16 +4,6 @@ const WA_LINK = 'https://wa.me/5562993557723?text=Olá!%20Gostaria%20de%20saber%
 
 const categories = [
   {
-    id: 'odonto',
-    label: '🦷 Odontologia',
-    treatments: [
-      { icon: '🦷', title: 'Tratamento Dental', desc: 'Diagnóstico e tratamento completo para sua saúde bucal, com técnicas modernas e minimamente invasivas.' },
-      { icon: '💎', title: 'Lentes de Contato Dental', desc: 'Ultra-finas camadas de porcelana que transformam completamente o sorriso com mínimo desgaste dental.' },
-      { icon: '✨', title: 'Clareamento Dental', desc: 'Clareamento seguro e eficaz para um sorriso mais branco e radiante, com técnicas de consultório e caseiras.' },
-      { icon: '🌟', title: 'Facetas de Porcelana', desc: 'Facetas em cerâmica de alta resistência para corrigir forma, cor e proporção dos dentes anteriores.' },
-    ],
-  },
-  {
     id: 'facial',
     label: '💉 Estética Facial',
     treatments: [

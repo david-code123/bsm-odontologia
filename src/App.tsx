@@ -1,5 +1,9 @@
 import { Analytics } from '@vercel/analytics/react'
+import Maintenance from './components/Maintenance'
 import Header from './components/Header'
+
+// ⚠️ MODO MANUTENÇÃO — mude para true para ativar, false para desativar
+const MAINTENANCE_MODE = false
 import Hero from './components/Hero'
 import About from './components/About'
 import Treatments from './components/Treatments'
@@ -14,6 +18,8 @@ import { useScrollReveal } from './components/useScrollReveal'
 
 export default function App() {
   useScrollReveal()
+
+  if (MAINTENANCE_MODE) return <Maintenance />
 
   return (
     <>

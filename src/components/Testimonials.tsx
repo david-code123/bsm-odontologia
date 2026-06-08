@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 const testimonials = [
   {
@@ -41,12 +41,43 @@ const testimonials = [
 
 export default function Testimonials() {
   const [current, setCurrent] = useState(0)
+  const [perPage, setPerPage] = useState(3)
+  const sliderRef = useRef<HTMLDivElement>(null)
+  const touchStartX = useRef(0)
+
+  useEffect(() => {
+    const update = () => {
+      const w = window.innerWidth
+      const pp = w < 640 ? 1 : w < 1024 ? 2 : 3
+      setPerPage(pp)
+      setCurrent(c => Math.min(c, Math.max(0, testimonials.length - pp)))
+    }
+    update()
+    window.addEventListener('resize', update)
+    return () => window.removeEventListener('resize', update)
+  }, [])
+
   const total = testimonials.length
-  const perPage = 3
+  const maxIndex = Math.max(0, total - perPage)
 
-  const maxIndex = total - perPage
+  const goTo = (i: number) => setCurrent(Math.max(0, Math.min(maxIndex, i)))
 
-  const offset = -current * (100 / perPage)
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX
+  }
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const delta = touchStartX.current - e.changedTouches[0].clientX
+    if (Math.abs(delta) > 40) goTo(current + (delta > 0 ? 1 : -1))
+  }
+
+  const getTransform = () => {
+    if (!sliderRef.current) return `translateX(calc(${-current * (100 / perPage)}% - ${current * 28 / perPage}px))`
+    const gap = 28
+    const sliderW = sliderRef.current.offsetWidth
+    const cardW = (sliderW - gap * (perPage - 1)) / perPage
+    return `translateX(${-current * (cardW + gap)}px)`
+  }
 
   return (
     <section id="depoimentos" className="testimonials" aria-labelledby="testimonials-title">
@@ -61,10 +92,17 @@ export default function Testimonials() {
           </p>
         </header>
 
-        <div className="testimonials-slider" role="region" aria-label="Carrossel de depoimentos">
+        <div
+          className="testimonials-slider"
+          ref={sliderRef}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          role="region"
+          aria-label="Carrossel de depoimentos"
+        >
           <div
             className="testimonials-track"
-            style={{ transform: `translateX(calc(${offset}% - ${current * 28}px))` }}
+            style={{ transform: getTransform() }}
             role="list"
           >
             {testimonials.map((t, i) => (
@@ -94,7 +132,7 @@ export default function Testimonials() {
               <button
                 key={i}
                 className={`slider-dot${current === i ? ' active' : ''}`}
-                onClick={() => setCurrent(i)}
+                onClick={() => goTo(i)}
                 aria-label={`Ir para depoimento ${i + 1}`}
                 aria-current={current === i ? 'true' : 'false'}
                 role="listitem"

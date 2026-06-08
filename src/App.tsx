@@ -3,7 +3,7 @@ import Maintenance from './components/Maintenance'
 import Header from './components/Header'
 
 // ⚠️ MODO MANUTENÇÃO — mude para true para ativar, false para desativar
-const MAINTENANCE_MODE = false
+const MAINTENANCE_MODE = true
 import Hero from './components/Hero'
 import About from './components/About'
 import Treatments from './components/Treatments'

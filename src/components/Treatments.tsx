@@ -26,6 +26,11 @@ const treatments = [
     title: 'Tratamentos Odontológicos',
     desc: 'Cuidado completo da saúde bucal com técnicas modernas: lentes de contato dental, clareamento, facetas e muito mais.',
   },
+  {
+    icon: '💠',
+    title: 'Tratamentos Corporais',
+    desc: 'Procedimentos estéticos corporais com tecnologia avançada para modelagem, firmeza e bem-estar geral do corpo.',
+  },
 ]
 
 export default function Treatments() {

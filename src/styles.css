@@ -932,6 +932,73 @@ input, textarea, select { font-family: inherit; }
 /* ============================================================
    GALERIA
    ============================================================ */
+/* ── Results ── */
+.results { padding: var(--section-padding); background: var(--color-white); }
+.results-header { text-align: center; margin-bottom: 56px; }
+.results-header .section-subtitle { margin: 16px auto 0; }
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.result-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  background: var(--color-gray-light);
+}
+.result-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.result-img-wrap {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+}
+.result-img-wrap img { transition: transform .5s ease; }
+.result-card:hover .result-img-wrap img { transform: scale(1.05); }
+.result-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15,23,42,0.55);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 24px;
+  opacity: 0;
+  transition: var(--transition);
+}
+.result-card:hover .result-overlay { opacity: 1; }
+.result-overlay-btn {
+  background: var(--color-accent);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.result-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 18px;
+}
+.result-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.result-treatment {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+@media (max-width: 1024px) { .results-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .results-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } .result-img-wrap { height: 220px; } }
+
 .gallery { padding: var(--section-padding); background: var(--color-gray-light); }
 .gallery-header { text-align: center; margin-bottom: 64px; }
 .gallery-header .section-subtitle { margin: 16px auto 0; }

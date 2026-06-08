@@ -24,26 +24,6 @@ export default function App() {
 
   return (
     <>
-      <a
-        href="#main-content"
-        style={{
-          position: 'absolute',
-          top: -100,
-          left: 16,
-          padding: '12px 24px',
-          background: 'var(--color-accent)',
-          color: '#fff',
-          borderRadius: '0 0 8px 8px',
-          fontWeight: 600,
-          zIndex: 9999,
-          transition: 'top .2s',
-        }}
-        onFocus={e => { (e.currentTarget as HTMLElement).style.top = '0' }}
-        onBlur={e => { (e.currentTarget as HTMLElement).style.top = '-100px' }}
-      >
-        Pular para o conteúdo principal
-      </a>
-
       <Header />
 
       <main id="main-content">

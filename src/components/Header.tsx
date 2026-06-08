@@ -33,7 +33,7 @@ export default function Header() {
         <div className="container">
           <div className="header-inner">
             <a href="#inicio" className="header-logo" aria-label="BSM Odontologia - Voltar ao início">
-              <img src="/logo.png" alt="BSM Odontologia e Estética Avançada" style={{ height: 52, width: 'auto', objectFit: 'contain' }} />
+              <img src="/images/logo.png" alt="BSM Odontologia e Estética Avançada" style={{ height: 52, width: 'auto', objectFit: 'contain' }} />
             </a>
 
             <nav className="nav" aria-label="Menu principal">

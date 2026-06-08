@@ -58,7 +58,7 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <div className="footer-logo">
-              <img src="/logo.png" alt="BSM Odontologia e Estética Avançada" style={{ height: 56, width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
+              <img src="/images/logo.png" alt="BSM Odontologia e Estética Avançada" style={{ height: 56, width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
             </div>
 
             <p className="footer-brand-text">

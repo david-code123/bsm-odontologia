@@ -97,10 +97,6 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hero-scroll-hint" aria-hidden="true">
-        <div className="scroll-mouse"><div className="scroll-wheel" /></div>
-        <span>scroll</span>
-      </div>
     </section>
   )
 }

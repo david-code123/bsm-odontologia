@@ -33,24 +33,7 @@ export default function Header() {
         <div className="container">
           <div className="header-inner">
             <a href="#inicio" className="header-logo" aria-label="BSM Odontologia - Voltar ao início">
-              {/*
-                LOGO — substituir pelo arquivo real da logo BSM.
-                Coloque o arquivo em /public/images/logo-bsm.png (ou .svg)
-                e troque o bloco abaixo por:
-                <img src="/images/logo-bsm.png" alt="BSM Odontologia" style={{ height: 44 }} />
-              */}
-              <div
-                className="header-logo-icon"
-                aria-hidden="true"
-                title="⚠️ Aguardando logo oficial"
-                style={{ outline: '2px dashed rgba(20,184,166,0.5)', outlineOffset: 2 }}
-              >
-                B
-              </div>
-              <div className="header-logo-text">
-                <span className="header-logo-name">BSM Odontologia</span>
-                <span className="header-logo-sub">Estética Avançada</span>
-              </div>
+              <img src="/logo.png" alt="BSM Odontologia e Estética Avançada" style={{ height: 52, width: 'auto', objectFit: 'contain' }} />
             </a>
 
             <nav className="nav" aria-label="Menu principal">

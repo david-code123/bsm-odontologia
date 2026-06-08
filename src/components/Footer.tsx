@@ -31,9 +31,8 @@ const socials = [
   {
     icon: '📸',
     label: 'Instagram',
-    // ⚠️ PENDENTE — substitua pelo link real do Instagram da BSM
-    href: 'https://instagram.com/USUARIO_INSTAGRAM',
-    pending: true,
+    href: 'https://www.instagram.com/bsm.odonto/',
+    pending: false,
   },
   {
     icon: '📘',
@@ -59,23 +58,7 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <div className="footer-logo">
-              {/*
-                LOGO FOOTER — substituir pelo arquivo real quando disponível.
-                Troque o bloco abaixo por:
-                <img src="/images/logo-bsm-branca.png" alt="BSM Odontologia" style={{ height: 36 }} />
-              */}
-              <div
-                className="footer-logo-icon"
-                aria-hidden="true"
-                title="⚠️ Aguardando logo oficial"
-                style={{ outline: '2px dashed rgba(20,184,166,0.4)', outlineOffset: 2 }}
-              >
-                B
-              </div>
-              <div>
-                <div className="footer-logo-name">BSM Odontologia</div>
-                <div className="footer-logo-sub">Estética Avançada</div>
-              </div>
+              <img src="/logo.png" alt="BSM Odontologia e Estética Avançada" style={{ height: 56, width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
             </div>
 
             <p className="footer-brand-text">

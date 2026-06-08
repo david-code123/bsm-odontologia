@@ -4,7 +4,7 @@ const galleryItems: { src: string; alt: string; position?: string }[] = [
   { src: '/images/clinic-estetica.jpg',   alt: 'Sala de estética com equipamento Hyalus',                 position: 'center' },
   { src: '/images/clinic-entrada.jpg',    alt: 'Fachada da BSM Odontologia — Jardim Goiás, Goiânia',      position: 'center' },
   { src: '/images/dentist-procedure.jpg', alt: 'Dentista BSM realizando procedimento odontológico',        position: 'top'    },
-  { src: '/images/dentist-blue.jpg',      alt: 'Especialista em odontologia estética da BSM',              position: 'top'    },
+  { src: '/images/dentist-green.jpg',     alt: 'Especialista em odontologia estética da BSM',              position: 'top'    },
 ]
 
 export default function Gallery() {

@@ -15,7 +15,7 @@ import WhatsAppFloat from './components/WhatsAppFloat'
 import { useScrollReveal } from './components/useScrollReveal'
 
 // ⚠️ MODO MANUTENÇÃO — mude para true para ativar, false para desativar
-const MAINTENANCE_MODE = false
+const MAINTENANCE_MODE = true
 
 export default function App() {
   useScrollReveal()

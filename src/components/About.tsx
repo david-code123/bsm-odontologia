@@ -1,10 +1,8 @@
 const features = [
-  { icon: '🤝', title: 'Atendimento Humanizado', desc: 'Cada paciente é tratado com cuidado e atenção individualizada.' },
-  { icon: '⚙️', title: 'Equipamentos Modernos', desc: 'Tecnologia de ponta para diagnósticos precisos e tratamentos eficazes.' },
-  { icon: '🎓', title: 'Especialistas Qualificados', desc: 'Equipe com formação e atualização contínua nas melhores técnicas.' },
-  { icon: '🔬', title: 'Tecnologia Avançada', desc: 'Procedimentos minimamente invasivos com resultados superiores.' },
-  { icon: '🏢', title: 'Ambiente Confortável', desc: 'Espaço projetado para seu bem-estar e tranquilidade.' },
-  { icon: '⭐', title: 'Resultados de Excelência', desc: 'Avaliação 5 estrelas no Google comprovam nosso compromisso.' },
+  { icon: '🤝', title: 'Atendimento Individualizado', desc: 'Avaliação detalhada e plano personalizado para cada paciente.' },
+  { icon: '🛡️', title: 'Segurança em Primeiro Lugar', desc: 'Protocolos, estrutura e acompanhamento para mais tranquilidade.' },
+  { icon: '✨', title: 'Resultados Naturais', desc: 'Estética com equilíbrio, sem exageros e respeitando sua identidade.' },
+  { icon: '⚙️', title: 'Tecnologia e Estrutura Moderna', desc: 'Ambiente preparado para procedimentos estéticos faciais com conforto e precisão.' },
 ]
 
 export default function About() {
@@ -55,19 +53,23 @@ export default function About() {
           <div className="about-content reveal-right">
             <p className="section-tag">Conheça a BSM</p>
             <h2 className="section-title" id="about-title">
-              Dedicados à sua <span>saúde bucal</span> e ao seu sorriso
+              Estética facial com <span>segurança, naturalidade</span> e precisão
             </h2>
 
             <p className="about-text" style={{ marginTop: 20 }}>
-              A <strong>BSM Odontologia e Estética Avançada</strong> tem como missão transformar
-              sorrisos e melhorar vidas através de tratamentos odontológicos modernos, tecnologia
-              avançada e atendimento humanizado.
+              A <strong>BSM Odontologia e Estética Avançada</strong> nasceu para oferecer
+              tratamentos estéticos faciais com planejamento individualizado, técnica apurada
+              e foco em resultados naturais.
             </p>
             <p className="about-text">
-              Localizada no coração do Jardim Goiás em Goiânia/GO, nossa clínica reúne
-              especialistas altamente qualificados e equipamentos de última geração para oferecer
-              resultados excepcionais — desde procedimentos preventivos até transformações
-              estéticas completas.
+              Localizada no coração do Jardim Goiás, em Goiânia/GO, nossa clínica une estrutura
+              moderna, atendimento humanizado e protocolos de segurança para quem busca
+              rejuvenescimento, harmonização facial e procedimentos estéticos com responsabilidade.
+            </p>
+            <p className="about-text">
+              Aqui, cada detalhe importa: da avaliação inicial ao acompanhamento
+              pós-procedimento, sempre respeitando a anatomia, a individualidade e o desejo
+              de cada paciente.
             </p>
 
             <div className="about-features" role="list" aria-label="Diferenciais da clínica">

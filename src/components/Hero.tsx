@@ -8,20 +8,20 @@ export default function Hero() {
 
       <div className="container">
         <div className="hero-inner">
-          <div className="hero-content reveal-left">
+          <div className="hero-content">
             <div className="hero-badge" aria-label="Avaliação">
               <span className="hero-badge-dot" />
               ★ 5,0 no Google · +500 Pacientes Satisfeitos
             </div>
 
             <h1 className="hero-title">
-              Transformando Sorrisos com{' '}
-              <span>Tecnologia e Excelência</span>
+              Sua melhor versão{' '}
+              <span>começa aqui</span>
             </h1>
 
             <p className="hero-subtitle">
-              Tratamentos odontológicos modernos para devolver sua autoestima
-              e qualidade de vida. Agende sua consulta em Goiânia/GO.
+              Procedimentos estéticos faciais com segurança, técnica apurada
+              e resultados que respeitam a sua identidade. Jardim Goiás, Goiânia/GO.
             </p>
 
             <div className="hero-actions">
@@ -61,7 +61,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="hero-visual reveal-right">
+          <div className="hero-visual">
             <div className="hero-image-wrapper">
               {/* ─────────────────────────────────────────────────────────────
                   FOTO HERO — substituir pelo arquivo real da clínica/equipe

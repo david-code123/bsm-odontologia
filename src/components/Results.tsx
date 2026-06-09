@@ -1,10 +1,11 @@
 const WA_LINK = 'https://wa.me/5562993557723?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20BSM%20Odontologia.'
 
 const results = [
-  { src: '/images/result-harmonizacao.jpg', treatment: 'Harmonização Facial', label: 'FullFace' },
-  { src: '/images/result-botox.jpg',        treatment: 'Botox',               label: 'Estética Facial' },
-  { src: '/images/result-lipo-papada.jpg',  treatment: 'Lipo de Papada',      label: 'Estética Facial' },
-  { src: '/images/result-rejuvenescimento.jpg', treatment: 'Rejuvenescimento do Olhar', label: 'Estética Facial' },
+  { src: '/images/proc-harmonizacao.jpeg',    treatment: 'Harmonização Facial',       label: 'FullFace' },
+  { src: '/images/proc-botox.jpeg',           treatment: 'Botox',                     label: 'Estética Facial' },
+  { src: '/images/proc-papada.jpeg',          treatment: 'Papada',                    label: 'Estética Facial' },
+  { src: '/images/proc-rejuvenescimento.jpeg',treatment: 'Rejuvenescimento do Olhar', label: 'Estética Facial' },
+  { src: '/images/proc-otomodelacao.jpeg',    treatment: 'Otomodelação Estruturada',  label: 'Estética Facial' },
 ]
 
 export default function Results() {

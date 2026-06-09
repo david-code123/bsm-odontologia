@@ -1,8 +1,8 @@
 const WA_LINK = 'https://wa.me/5562993557723?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20BSM%20Odontologia.'
 const PHONE = 'tel:+5562993557723'
 // Mapa via search — funciona sem API key, aponta para o endereço exato
-const MAP_EMBED = 'https://maps.google.com/maps?q=Rua+61,+446,+Jardim+Goi%C3%A1s,+Goi%C3%A2nia,+GO,+74810-280&t=&z=17&ie=UTF8&iwloc=&output=embed'
-const MAP_LINK  = 'https://www.google.com/maps/search/?api=1&query=Rua+61+446+Jardim+Goias+Goiania+GO+74810-280'
+const MAP_EMBED = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.149!2d-49.2458164!3d-16.7009134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef1aadfb3be03%3A0x34ee42d883af3f0d!2sBSM%20Odontologia%20e%20est%C3%A9tica%20avan%C3%A7ada!5e0!3m2!1spt-BR!2sbr!4v1718800000000!5m2!1spt-BR!2sbr'
+const MAP_LINK  = 'https://www.google.com/maps/place/BSM+Odontologia+e+est%C3%A9tica+avan%C3%A7ada/@-16.7009134,-49.2458164,1050m/data=!3m2!1e3!4b1!4m6!3m5!1s0x935ef1aadfb3be03:0x34ee42d883af3f0d!8m2!3d-16.7009186!4d-49.2432415!16s%2Fg%2F11wx_gq4q0'
 
 const hours = [
   { day: 'Segunda a Sexta', time: '08:00 – 18:00' },

@@ -30,7 +30,7 @@ export default function Results() {
                   src={r.src}
                   alt={`Resultado de ${r.treatment} — BSM Odontologia`}
                   loading="lazy"
-                  style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block', background: '#f8f8f8' }}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
                 />
                 <div className="result-overlay">
                   <a

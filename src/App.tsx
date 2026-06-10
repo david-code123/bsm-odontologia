@@ -8,6 +8,7 @@ import Treatments from './components/Treatments'
 import Differentials from './components/Differentials'
 import Testimonials from './components/Testimonials'
 import Results from './components/Results'
+import InstagramStrip from './components/InstagramStrip'
 import Gallery from './components/Gallery'
 import CTA from './components/CTA'
 import Contact from './components/Contact'
@@ -34,6 +35,7 @@ export default function App() {
         <Differentials />
         <Testimonials />
         <Results />
+        <InstagramStrip />
         <Gallery />
         <CTA />
         <Contact />

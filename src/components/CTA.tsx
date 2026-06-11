@@ -7,7 +7,7 @@ export default function CTA() {
       <div className="container">
         <div className="cta-content reveal">
           <h2 className="cta-title" id="cta-title">
-            Seu novo sorriso começa hoje
+            Seu novo eu começa aqui
           </h2>
           <p className="cta-subtitle">
             Agende sua consulta agora mesmo e dê o primeiro passo para transformar

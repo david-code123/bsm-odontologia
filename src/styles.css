@@ -794,6 +794,9 @@ input, textarea, select { font-family: inherit; }
 .differentials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+.differentials-grid--4 {
+  grid-template-columns: repeat(4, 1fr);
   gap: 28px;
   position: relative;
   z-index: 1;
@@ -1007,19 +1010,28 @@ input, textarea, select { font-family: inherit; }
   background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
   border-top: 1px solid rgba(201,165,53,.15);
   border-bottom: 1px solid rgba(201,165,53,.15);
-  padding: 28px 0;
+  padding: 32px 0;
 }
-.ig-strip-inner {
+.ig-strip-dual {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.ig-strip-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 20px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  padding: 24px 28px;
   flex-wrap: wrap;
 }
-.ig-strip-left {
+.ig-strip-card-info {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -1041,7 +1053,7 @@ input, textarea, select { font-family: inherit; }
   gap: 4px;
 }
 .ig-strip-handle {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   color: #fff;
   letter-spacing: -.01em;
@@ -1056,19 +1068,22 @@ input, textarea, select { font-family: inherit; }
   gap: 8px;
   background: linear-gradient(135deg, #d6249f, #fd5949, #fdf497);
   color: #fff;
-  padding: 12px 28px;
+  padding: 11px 22px;
   border-radius: 50px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 13px;
   text-decoration: none;
   white-space: nowrap;
   transition: var(--transition);
   box-shadow: 0 4px 20px rgba(214,36,159,.3);
+  flex-shrink: 0;
 }
 .ig-strip-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(214,36,159,.45); }
+@media (max-width: 900px) {
+  .ig-strip-dual { grid-template-columns: 1fr; }
+}
 @media (max-width: 640px) {
-  .ig-strip-inner { flex-direction: column; text-align: center; }
-  .ig-strip-left { flex-direction: column; }
+  .ig-strip-card { flex-direction: column; align-items: flex-start; }
   .ig-strip-btn { width: 100%; justify-content: center; }
 }
 
@@ -1274,19 +1289,22 @@ input, textarea, select { font-family: inherit; }
 .footer-logo-name { font-family: var(--font-serif); font-size: 15px; font-weight: 700; color: var(--color-white); }
 .footer-logo-sub { font-size: 10px; color: var(--color-accent); text-transform: uppercase; letter-spacing: .08em; }
 .footer-brand-text { font-size: 14px; line-height: 1.7; margin-bottom: 24px; }
-.footer-social { display: flex; gap: 12px; }
+.footer-social { display: flex; flex-direction: column; gap: 8px; }
 .footer-social-link {
-  width: 36px; height: 36px;
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 8px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 16px;
+  gap: 10px;
+  padding: 8px 12px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 8px;
   transition: var(--transition);
+  text-decoration: none;
 }
-.footer-social-link:hover { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-white); transform: translateY(-2px); }
+.footer-social-link:hover { background: rgba(201,165,53,.1); border-color: rgba(201,165,53,.3); transform: translateX(4px); }
+.footer-social-text { display: flex; flex-direction: column; gap: 1px; }
+.footer-social-handle { font-size: 13px; font-weight: 600; color: var(--color-white); }
+.footer-social-sub { font-size: 11px; color: rgba(255,255,255,.4); }
 
 .footer-col-title { font-size: 13px; font-weight: 700; color: var(--color-white); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 20px; }
 .footer-links { display: flex; flex-direction: column; gap: 10px; }
